@@ -629,6 +629,8 @@ const AdminHome = () => {
     { path: "/", icon: Home, label: "Dashboard" },
     { path: "/orders", icon: ShoppingBag, label: "Orders" },
     { path: "/products", icon: Package, label: "Products" },
+    { path: "/brands", icon: Tag, label: "Brands" },
+    { path: "/categories", icon: Tag, label: "Categories" },
     { path: "/users", icon: Users, label: "Users" },
     { path: "/coupons", icon: Tag, label: "Coupons" },
     { path: "/banners", icon: ImageIcon, label: "Banners" },

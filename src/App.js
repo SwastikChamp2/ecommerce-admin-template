@@ -10,9 +10,11 @@ import AnnouncementManager from "./pages/AnnouncementManagement/AnnouncementMana
 import Orders from "./pages/Orders";
 import Login from "./pages/Login";
 import AdminHome from "./pages/AdminHome";
-import { ToastContainer } from "react-toastify"; 
-import 'react-toastify/dist/ReactToastify.css'; 
-import { AuthProvider } from "./contexts/AuthContext"; 
+import Brands from "./pages/BrandManagement/Brands";
+import Categories from "./pages/CategoryManagement/Categories";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import { AuthProvider } from "./contexts/AuthContext";
 
 /**
  * Main Application Component
@@ -29,8 +31,8 @@ function App() {
         <ToastContainer /> {/* Add ToastContainer for notifications */}
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route 
-            path="/" 
+          <Route
+            path="/"
             element={
               <ProtectedRoute requiredRole="Admin">
                 <AdminHome />
@@ -46,6 +48,8 @@ function App() {
             <Route path="coupons" element={<CouponManager />} />
             <Route path="banners" element={<BannerManager />} />
             <Route path="announcements" element={<AnnouncementManager />} />
+            <Route path="brands" element={<Brands />} />
+            <Route path="categories" element={<Categories />} />
           </Route>
           {/* Optionally, handle 404 Not Found */}
           <Route path="*" element={<div className="p-4">404 Not Found</div>} />
